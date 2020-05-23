@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<style type="text/css">
+		*{
+			font-size: 18px;
+		}
+	</style>
+</head>
+<body>
+	<div style="height: 200px;width: 600px;background: linear-gradient(to right,red,blue);color: #fff;margin:auto;">
+		<form>
+			<span>Nhập a</span><br>
+			<input id="a"></input><br>
+			<span>Nhập b</span><br>
+			<input id="b"></input><br>
+			<input type="radio" name="solves" value="+" class="tinh" checked="checked">Cộng
+			<input type="radio" name="solves" value="-" class="tinh">Trừ
+			<input type="radio" name="solves" value="*" class="tinh">Nhân
+			<input type="radio" name="solves" value="/" class="tinh">Chia<br>
+			<input type="button" name="" value="tính" onclick="s()"><br>
+			<p id="show" style="text-align: center;">
+
+			</p>
+		</form>
+	</div>
+	<script type="text/javascript">
+		var a=document.getElementById('a');
+		var b=document.getElementById('b');
+		var show=document.getElementById('show');
+
+		function s(){
+			if(a.value==/[0-9]/g){
+			alert('không được nhập kí tự')
+		}
+			var inp=document.querySelector('.tinh:checked');
+			switch(inp.value){
+				case '+': show.innerHTML=parseInt(a.value)+'+'+parseInt(b.value)+' = '+(parseInt(a.value)+parseInt(b.value)); break;
+				case '-': show.innerHTML=parseInt(a.value)+'-'+parseInt(b.value)+' = '+(parseInt(a.value)-parseInt(b.value));
+
+			}
+		}
+	</script>
+</body>
+</html>
