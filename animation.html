@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#relative{
+			height: 6000px;
+			width: 600px;
+			background-color: red;
+			position: relative;
+		}
+		#relative img{
+			position: absolute;
+			animation: mymove 3s infinite;
+			z-index: 0;
+
+		}
+		@keyframes mymove {
+  		from {opacity: 0;
+  		margin-left:-300px;}
+  		to {opacity: 1;
+  		margin-left:50px;
+  		transform: scale(1.2);}
+}
+		#relative p{
+			position: fixed;
+			z-index: 1
+		}
+	</style>
+</head>
+<body>
+	<div id="relative">
+		<img src="ba.jpg" style="width: 300px">
+		<p>nguyễn ngọc hải</p>
+	</div>
+</body>
+</html>
